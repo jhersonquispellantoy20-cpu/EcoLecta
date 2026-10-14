@@ -1,6 +1,4 @@
-
-<!DOCTYPE html>git remote -v
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +6,8 @@
   <meta name="description" content="EcoColecta conecta a la comunidad con el reciclaje.">
   <title>EcoColecta | Reciclaje comunitario</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Fuente Google Poppins para mejor estilo -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -23,43 +23,69 @@
   </nav>
 
   <main>
-    <section id="inicio" class="tarjeta">
-      <h2>¡Reciclar transforma nuestro futuro!</h2>
+    <!-- Sección Inicio Mejorada con Métricas de Impacto -->
+    <section id="inicio" class="tarjeta hero-section">
+      <h2>¡Reciclar transforma nuestro futuro! 🌱</h2>
       <p>
-        Encuentra puntos de reciclaje y registra tus entregas
-        para contribuir al cuidado del medioambiente.
+        Encuentra puntos de reciclaje en tu zona y registra tus entregas
+        para contribuir activamente al cuidado del medioambiente.
       </p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon">📦</span>
+          <h3>+1,200 kg</h3>
+          <p>Material Recolectado</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">👥</span>
+          <h3>+350</h3>
+          <p>Vecinos Participantes</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">📍</span>
+          <h3>15</h3>
+          <p>Puntos Activos</p>
+        </div>
+      </div>
     </section>
 
+    <!-- Puntos de Reciclaje con Mejor Diseño -->
     <section id="puntos" class="tarjeta">
-      <h2>Puntos de reciclaje</h2>
-      <ul>
-        <li>Plaza principal — Papel y cartón</li>
-        <li>Centro comunitario — Plástico</li>
-        <li>Municipalidad — Vidrio y metales</li>
+      <h2>📍 Puntos de reciclaje cercanos</h2>
+      <ul class="lista-puntos">
+        <li><strong>🏛️ Plaza Principal:</strong> Papel y cartón</li>
+        <li><strong>🏫 Centro Comunitario:</strong> Plástico y botellas PET</li>
+        <li><strong>🏬 Municipalidad:</strong> Vidrio y metales</li>
       </ul>
     </section>
 
+    <!-- Formulario de Registro -->
     <section id="registro" class="tarjeta">
-      <h2>Registrar una entrega</h2>
+      <h2>📝 Registrar una entrega</h2>
       <form id="formulario-entrega">
-        <label for="ciudadano">Nombre del ciudadano</label>
-        <input id="ciudadano" name="ciudadano" required>
+        <div class="campo-grupo">
+          <label for="ciudadano">Nombre del ciudadano</label>
+          <input id="ciudadano" name="ciudadano" placeholder="Ej. Juan Pérez" required>
+        </div>
 
-        <label for="material">Material reciclable</label>
-        <select id="material" name="material" required>
-          <option value="">Selecciona un material</option>
-          <option value="Papel">Papel</option>
-          <option value="Plástico">Plástico</option>
-          <option value="Vidrio">Vidrio</option>
-          <option value="Metal">Metal</option>
-        </select>
+        <div class="campo-grupo">
+          <label for="material">Material reciclable</label>
+          <select id="material" name="material" required>
+            <option value="">Selecciona un material</option>
+            <option value="Papel">Papel</option>
+            <option value="Plástico">Plástico</option>
+            <option value="Vidrio">Vidrio</option>
+            <option value="Metal">Metal</option>
+          </select>
+        </div>
 
-        <label for="cantidad">Cantidad (kg)</label>
-        <input id="cantidad" name="cantidad"
-               type="number" min="0.1" step="0.1" required>
+        <div class="campo-grupo">
+          <label for="cantidad">Cantidad (kg)</label>
+          <input id="cantidad" name="cantidad" type="number" min="0.1" step="0.1" placeholder="Ej. 2.5" required>
+        </div>
 
-        <button type="submit">Registrar entrega</button>
+        <button type="submit" class="btn-registrar">Registrar entrega</button>
       </form>
       <p id="mensaje" role="status" aria-live="polite"></p>
       <ul id="historial"></ul>

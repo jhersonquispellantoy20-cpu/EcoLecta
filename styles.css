@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f7f1;
+  color: #24352a;
+  line-height: 1.6;
+}
+
+.encabezado {
+  background: #176b45;
+  color: white;
+  text-align: center;
+  padding: 28px 16px;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  background: #d8ecdc;
+}
+
+nav a {
+  color: #145c37;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: min(900px, 92%);
+  margin: 28px auto;
+}
+
+.tarjeta {
+  background: white;
+  padding: 24px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #183c2012;
+}
+
+.tarjeta h2 {
+  color: #176b45;
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input, select, button {
+  font: inherit;
+  padding: 11px;
+  border-radius: 6px;
+}
+
+input, select {
+  border: 1px solid #a7b9aa;
+  background: white;
+}
+
+button {
+  border: none;
+  background: #176b45;
+  color: white;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #105335;
+}
+
+#mensaje {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #d8ecdc;
+}
+
+@media (max-width: 600px) {
+  .encabezado h1 {
+    font-size: 1.8rem;
+  }
+
+  .tarjeta {
+    padding: 18px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+}

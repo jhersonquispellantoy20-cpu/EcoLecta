@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoColecta conecta a la comunidad con el reciclaje.">
+  <title>EcoColecta | Reciclaje comunitario</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <h1>♻️ EcoColecta</h1>
+    <p>Juntos construimos una comunidad más sostenible</p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#puntos">Puntos de reciclaje</a>
+    <a href="#registro">Registrar entrega</a>
+  </nav>
+
+  <main>
+    <section id="inicio" class="tarjeta">
+      <h2>¡Reciclar transforma nuestro futuro!</h2>
+      <p>
+        Encuentra puntos de reciclaje y registra tus entregas
+        para contribuir al cuidado del medioambiente.
+      </p>
+    </section>
+
+    <section id="puntos" class="tarjeta">
+      <h2>Puntos de reciclaje</h2>
+      <ul>
+        <li>Plaza principal — Papel y cartón</li>
+        <li>Centro comunitario — Plástico</li>
+        <li>Municipalidad — Vidrio y metales</li>
+      </ul>
+    </section>
+
+    <section id="registro" class="tarjeta">
+      <h2>Registrar una entrega</h2>
+      <form id="formulario-entrega">
+        <label for="ciudadano">Nombre del ciudadano</label>
+        <input id="ciudadano" name="ciudadano" required>
+
+        <label for="material">Material reciclable</label>
+        <select id="material" name="material" required>
+          <option value="">Selecciona un material</option>
+          <option value="Papel">Papel</option>
+          <option value="Plástico">Plástico</option>
+          <option value="Vidrio">Vidrio</option>
+          <option value="Metal">Metal</option>
+        </select>
+
+        <label for="cantidad">Cantidad (kg)</label>
+        <input id="cantidad" name="cantidad"
+               type="number" min="0.1" step="0.1" required>
+
+        <button type="submit">Registrar entrega</button>
+      </form>
+      <p id="mensaje" role="status" aria-live="polite"></p>
+      <ul id="historial"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>EcoColecta © 2026 | Reciclar es responsabilidad de todos.</p>
+  </footer>
+</body>
+</html>

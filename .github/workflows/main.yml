@@ -1,0 +1,23 @@
+name: CI EcoLecta - Verificacion Automatica
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verificacion:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Descargar el código del repositorio
+      uses: actions/checkout@v4
+
+    - name: Verificar estructura del proyecto
+      run: |
+        echo "=== Iniciando verificacion automatica de EcoLecta ==="
+        ls -la
+        test -f index.html && echo "✓ index.html presente"
+        test -f styles.css && echo "✓ styles.css presente"
+        echo "=== Verificacion completada con exito ==="
